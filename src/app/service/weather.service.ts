@@ -3,16 +3,13 @@ import { Http, Response, Headers, RequestOptions } from '@angular/http';
 import { Observable } from 'rxjs/Rx';
 import { Observer } from 'rxjs/Observer'
 
-import {CurrentWeather} from '../currentWeather'
 
 @Injectable()
 export class WeatherService {
-  currentWeather: CurrentWeather = new CurrentWeather('Madrid', 'Es', 30, 12, 35, 'clearSky');
-  constructor(private http: Http) { }
 
-  getCurrentWeather() {
-    return this.currentWeather;
-  }
+  private location;
+
+  constructor(private http: Http) { }
 
   getWeatherData(lat: number, lon: number) {
     var options = new RequestOptions({
@@ -27,7 +24,7 @@ export class WeatherService {
       })
       .catch((error: any) => {
         return Observable
-          .throw(error.json() || 'Error de servidor');
+          .throw(error.json() || 'You need to allow geolocation');
       });
   }
 }

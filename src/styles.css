@@ -74,6 +74,7 @@ a:hover {
     transition-duration: 0.4s;
     cursor: pointer;
 }
+button:focus {outline:0;}
 button:hover {
     background-color: black;
     color: white;
