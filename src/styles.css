@@ -19,6 +19,39 @@ body {
   -moz-border-radius: 50%;
   -webkit-border-radius: 50%;
 }
+@-webkit-keyframes aniload {
+  from {opacity:0}
+  to   {opacity:1}
+}
+
+@-moz-keyframes aniload {
+  from {opacity:0}
+  to   {opacity:1}
+}
+
+@-ms-keyframes aniload {
+  from {opacity:0}
+  to   {opacity:1}
+}
+
+@-o-keyframes aniload {
+  from {opacity:0}
+  to   {opacity:1}
+}
+
+@keyframes aniload {
+  from {opacity:0}
+  to   {opacity:1}
+}
+
+/* Step 2: Call the Animation */
+#circle {
+  -webkit-animation:aniload 9s;
+  -moz-animation:aniload 9s;
+  -ms-animation:aniload 9s;
+  -o-animation:aniload 9s;
+  animation:aniload 9s;
+}
 .gradient {
   background-image:
     radial-gradient(
@@ -87,6 +120,31 @@ footer {
   font-weight: 400;
   margin-top: 4rem;
 }
+.loading {
+    opacity: 0;
+    transition: opacity 7s ease-in-out;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: black;
+    z-index: -1;
+}
+/* .loading screen is visible when app is not bootstraped yet, .my-app is empty */
+app-root:empty + .loading {
+    opacity: 1;
+    z-index: 100;
+}
+app-root:empty + .loading h2 {
+    color: #EEE;
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    text-align: center;
+    transform: translate(0, -50%);
+}
+
 
 @media (max-width: 768px) {
   /* For mobile phones: */

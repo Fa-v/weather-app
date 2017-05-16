@@ -1,10 +1,10 @@
-<div class="container">
+<div class="container" id="circle">
   <!--container-->
 
-  <h3>{{city}}, {{country}}</h3>
+  <h3 id="circle">{{city}}, {{country}}</h3>
   <!--circle-->
-  <div class="circle gradient">
-    <div class="cirlce-content">
+  <div class="circle gradient" id="circle">
+    <div class="cirlce-content" id="circle">
       <i class="owf owf-{{icon}} owf-5x"></i>
       <h1>{{currentTemperature}}</h1>
       <h3>{{description}}</h3>
@@ -14,11 +14,11 @@
 
   <!--button-->
   <div>
-    <button class="button" (click)="changeTemp(tempIsCelsius)">{{degreeBtnText}}</button>
+    <button id="circle" class="button" (click)="changeTemp(tempIsCelsius)">{{degreeBtnText}}</button>
   </div>
 
   <!--footer-->
-  <footer class="page-footer">
+  <footer id="circle" class="page-footer">
     <div>
       <p>
         This is a project for Free Code Camp. It is made with Angulat 2, CSS, and served thanks to GitHub Pages. I used Poppins font
