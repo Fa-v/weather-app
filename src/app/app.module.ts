@@ -5,18 +5,24 @@ import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 import { WeatherDataComponent } from './weather-data/weather-data.component';
+import { HeaderComponent } from './header/header.component';
+import { FooterComponent } from './footer/footer.component';
 
-import {WeatherService} from './service/weather.service'
+import {WeatherService} from './service/weather.service';
+import {weatherRouting} from './weather.routing';
 
 @NgModule({
   declarations: [
     AppComponent,
-    WeatherDataComponent
+    WeatherDataComponent,
+    HeaderComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    weatherRouting
   ],
   providers: [WeatherService],
   bootstrap: [AppComponent]
