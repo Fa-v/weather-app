@@ -3,6 +3,7 @@ export class CurrentWeather {
     public city: string,
     public country: string,
     public description: string,
+    public icon: string,
     public currentTemperature: any,
     public minTemperature: any,
     public maxTemperature: any,
@@ -12,7 +13,7 @@ export class CurrentWeather {
     public currentFahrenheit: any,
     public minFahrenheit: any,
     public maxFahrenheit: any,
-    public icon: string,
+    
   ) {
 
   }

@@ -8,7 +8,8 @@ import { WeatherDataComponent } from './weather-data/weather-data.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 
-import {WeatherService} from './service/weather.service';
+import {WeatherService} from './services/weather.service';
+import {ResolvingLocationService} from './services/resolving-location.service';
 import {weatherRouting} from './weather.routing';
 
 @NgModule({
@@ -24,7 +25,7 @@ import {weatherRouting} from './weather.routing';
     HttpModule,
     weatherRouting
   ],
-  providers: [WeatherService],
+  providers: [WeatherService, ResolvingLocationService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
