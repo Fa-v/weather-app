@@ -1,20 +1,38 @@
-<div class="container" id="circle">
+<app-preloader [isLoading]="isLoading"></app-preloader>
+
+<div class="container" id="weather-content" *ngIf="!isLoading">
   <!--container-->
-
-  <h3 id="circle">{{currentWeather.city}}, {{currentWeather.country}}</h3>
-  <!--circle-->
-  <div class="circle gradient" id="circle">
-    <div class="cirlce-content" id="circle">
-      <i class="owf owf-{{currentWeather.icon}} owf-5x"></i>
-      <h1>{{currentWeather.currentTemperature}}</h1>
-      <h3>{{currentWeather.description}}</h3>
-      <h5>{{currentWeather.minTemperature}} <span class="icon is-large"><i class="fa fa-thermometer-three-quarters" aria-hidden="true"></i></span> {{currentWeather.maxTemperature}}</h5>
+  <main>
+    <h3>{{currentWeather.city}}</h3>
+    <div>
+      <div>
+        <i class="owf owf-{{currentWeather.icon}} owf-5x"></i>
+        <h1>{{currentWeather.currentTemperature}}</h1>
+        <h3>{{currentWeather.description}}</h3>
+        <h5>{{currentWeather.minTemperature}} <span class="icon is-large"><i class="fa fa-thermometer-three-quarters" aria-hidden="true"></i></span>          {{currentWeather.maxTemperature}}</h5>
+      </div>
     </div>
-  </div>
 
-  <!--button-->
-  <div>
-    <button id="circle" class="button" (click)="changeTemp(tempIsCelsius)">{{degreeBtnText}}</button>
-  </div>
+    <!--button-->
+    <div class="button">
+      <a class="waves-effect waves-light btn light-green darken-3" (click)="changeTemp(tempIsCelsius)">{{degreeBtnText}}</a>
+    </div>
+  </main>
+  <!--footer-->
+  <footer class="page-footer" id="weather-content">
+    <div class="container">
+      <div class="row">
+        <p>
+          This is a project for <a href="https://www.freecodecamp.com/challenges/show-the-local-weather" target="blank">Free Code Camp.</a>          It is made with Angulat 2, CSS, and served thanks to <a href="https://help.github.com/articles/what-is-github-pages/"
+            target="blank">GitHub Pages.</a> I used Poppins font from <a href="https://fonts.google.com/specimen/Poppins" target="blank">GoogleFonts. </a>          The weather data is served thanks to <a href="https://openweathermap.org/" target="blank">Open Weather Map </a>,
+          and the icons are from <a href="https://websygen.github.io/owfont/" target="blank">OpenWeatherFont</a> and <a href="http://fontawesome.io/"
+            target="blank">Font Awesome</a>
+        </p>
+        <p>
+          <a href="http://fabiolavieyra.com/">www.fabiolavieyra.com</a>
+        </p>
+      </div>
+    </div>
+  </footer>
   <!--container-->
 </div>

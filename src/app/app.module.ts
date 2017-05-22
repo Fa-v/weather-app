@@ -6,26 +6,27 @@ import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 import { WeatherDataComponent } from './weather-data/weather-data.component';
 import { HeaderComponent } from './header/header.component';
-import { FooterComponent } from './footer/footer.component';
+import { PreloaderComponent } from './preloader/preloader.component';
 
 import {WeatherService} from './services/weather.service';
 import {ResolvingLocationService} from './services/resolving-location.service';
-import {weatherRouting} from './weather.routing';
+/*import {weatherRouting} from './weather.routing';*/
+
 
 @NgModule({
   declarations: [
     AppComponent,
     WeatherDataComponent,
     HeaderComponent,
-    FooterComponent
+    PreloaderComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule,
-    weatherRouting
+    HttpModule
+    /*weatherRouting*/
   ],
-  providers: [WeatherService, ResolvingLocationService],
+  providers: [WeatherService/*, ResolvingLocationService*/],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
