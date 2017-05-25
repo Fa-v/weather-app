@@ -9,9 +9,6 @@ import { HeaderComponent } from './header/header.component';
 import { PreloaderComponent } from './preloader/preloader.component';
 
 import {WeatherService} from './services/weather.service';
-import {ResolvingLocationService} from './services/resolving-location.service';
-/*import {weatherRouting} from './weather.routing';*/
-
 
 @NgModule({
   declarations: [
@@ -24,9 +21,8 @@ import {ResolvingLocationService} from './services/resolving-location.service';
     BrowserModule,
     FormsModule,
     HttpModule
-    /*weatherRouting*/
   ],
-  providers: [WeatherService/*, ResolvingLocationService*/],
+  providers: [WeatherService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
